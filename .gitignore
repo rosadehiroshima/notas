@@ -1,4 +1,4 @@
 *.pdf
 .DS_store
-**/listas
+**/listas/*.pdf
 **/slides
