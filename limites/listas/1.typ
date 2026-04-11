@@ -355,3 +355,9 @@
 
   #counter(math.equation).update(0)
 ])
+
+= Determina o valor de $m$ para que a função abaixo seja contínua em $x = 2$
+
+$
+  f(x) = cases(12-x^3 ", se" x < 2, m ", se" x = 2, (x^2-4)/(x-2) ", se" x>2)
+$
