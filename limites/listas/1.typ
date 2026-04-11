@@ -23,7 +23,7 @@
 
 = Use o gráfico dado da $f$ para determinar cada expressão, se ela existir. Se não existir, explique o por quê?
 
-#columns(2, align(left)[
+#block(align(left)[
   == $lim_(x -> 0^-) f(x) = 2$
   == $lim_(x -> 0^+) f(x) = 2$
   == $lim_(x -> 0) f(x) = 2$
@@ -32,9 +32,6 @@
   == $lim_(x -> 2^+) f(x) = -1$
   == $lim_(x -> 2) f(x) = exists.not$
   == $f(2) = -1$
-
-  #colbreak()
-
   == $lim_(x -> 5^-) f(x) = 2$
   == $lim_(x -> 5^+) f(x) = -2$
   == $lim_(x -> 5) f(x) = exists.not$
@@ -191,45 +188,170 @@
 
 = Calcule os seguintes limites:
 
-#columns(2, align(left)[
+#block(align(left)[
+  #set math.equation(numbering: "i)", number-align: left)
+
   == $lim_(x -> -infinity) 1/(5x+6)$
+
+  $
+    lim_(x -> -infinity) cancel(1/x)/(5cancel(x/x)+cancel(6/x))
+  $
+
+  $
+    lim_(x -> -infinity) 0/5 = 0
+  $
+
   #counter(math.equation).update(0)
 
   == $lim_(x -> +infinity) (3 - (5/(x^2+1)))$
+
+  $
+    lim_(x -> +infinity) (3 - (5/x^2/(x^2/x^2+1/x^2)))
+  $
+
+  $
+    lim_(x -> +infinity) (3 - (cancel(5/x^2)/(cancel(x^2/x^2)+cancel(1/x^2)))) = 3 - 0 = 3
+  $
+
   #counter(math.equation).update(0)
 
   == $lim_(x -> +infinity) (2sqrt(x) + x^2)/(2x^2 - 1)$
+
+  $
+    lim_(x -> +infinity) ((2sqrt(x))/x^2 + x^2/x^2)/((2x^2)/x^2 - 1/x^2)
+  $
+
+  $
+    lim_(x -> +infinity) (cancel(2sqrt(x)/abs(x)) + cancel(x^2/x^2))/(2cancel(x^2/x^2) - cancel(1/x^2))
+  $
+
+  $
+    lim_(x -> +infinity) (0 + 1)/(2 - 0) = 1/2
+  $
+
   #counter(math.equation).update(0)
 
   == $lim_(x -> -infinity) sqrt(5-x)$
+
+  $
+    lim_(x -> -infinity) sqrt(5-x)
+  $
+
+  $
+    lim_(x -> -infinity) sqrt(5-(-infinity)) = sqrt(+infinity) = +infinity
+  $
+
   #counter(math.equation).update(0)
 
   == $lim_(x -> +infinity) sqrt(5x^2 - 2)/(x+3)$
+
+  $
+    lim_(x -> +infinity) sqrt(5x^2/abs(x)^2 - 2/abs(x^2))/(x/x+3/x)
+  $
+
+  $
+    lim_(x -> +infinity) sqrt(5cancel(x^2/abs(x)^2) - cancel(2/abs(x^2)))/(cancel(x/x)+cancel(3/x))
+  $
+
+  $
+    lim_(x -> +infinity) sqrt(5 - 0)/(1+0) = sqrt(5)
+  $
+
   #counter(math.equation).update(0)
 
   == $lim_(x -> -infinity) sqrt(5x^2 - 2)/(x+3)$
+
+  $
+    lim_(x -> -infinity) sqrt(5x^2/abs(x)^2 - 2/abs(x)^2)/(x/x+3/x)
+  $
+
+  $
+    lim_(x -> -infinity) sqrt(5cancel(x^2/abs(x)^2) - cancel(2/abs(x)^2))/(cancel(x/x)+cancel(3/x))
+  $
+
+  $
+    lim_(x -> -infinity) sqrt(5 - 0)/(1+0) = -sqrt(5)
+  $
+
   #counter(math.equation).update(0)
 
-  == $lim_(x -> -infinity) (x^4)$
-  #counter(math.equation).update(0)
+  == $lim_(x -> -infinity) x^4$
 
-  #colbreak()
+  $
+    lim_(x -> -infinity) x^4 = (-infinity)^4 = +infinity
+  $
+
+  #counter(math.equation).update(0)
 
   == $lim_(x -> -infinity) (x^6+2x)$
+
+  $
+    lim_(x -> -infinity) (x^6+2x) = +infinity
+  $
+
   #counter(math.equation).update(0)
 
   == $lim_(x -> +infinity) (x^7+2x^4-3x^3)$
+
+  $
+    lim_(x -> +infinity) (x^7+2x^4-3x^3) = +infinity
+  $
+
   #counter(math.equation).update(0)
 
   == $lim_(x -> -infinity) (x^3-7x^4-2x^5)$
+
+  $
+    lim_(x -> -infinity) (x^3-7x^4-2x^5) = +infinity
+  $
+
   #counter(math.equation).update(0)
 
   == $lim_(x -> -infinity) (x^2-5x+6)/(x+3)$
+
+  $
+    lim_(x -> -infinity) (x^2/x-5x/x+6/x)/(x/x+3/x)
+  $
+
+  $
+    lim_(x -> -infinity) (cancel(x^2/x)-cancel(5x/x)+cancel(6/x))/(cancel(x/x)+cancel(3/x))
+  $
+
+  $
+    lim_(x -> -infinity) x-5 = -infinity
+  $
+
   #counter(math.equation).update(0)
 
   == $lim_(x -> -infinity) (x^2-4x+2)/(2x^2-7x+1)$
+
+  $
+    lim_(x -> -infinity) (x^2/x^2-4x/x^2+2/x^2)/(2x^2/x^2-7x/x^2+1/x^2)
+  $
+
+  $
+    lim_(x -> -infinity) (cancel(x^2/x^2)-cancel(4x/x^2)+cancel(2/x^2))/(cancel(2x^2/x^2)-cancel(7x/x^2)+cancel(1/x^2))
+  $
+
+  $
+    lim_(x -> -infinity) (1-0+0)/(2-0+0) = 1/2
+  $
+
   #counter(math.equation).update(0)
 
   == $lim_(x -> -infinity) (x^4+x^3-3)/(10-3x)$
+
+  $
+    lim_(x -> -infinity) (cancel(x^4/x)+cancel(x^3/x)-cancel(3/x))/(cancel(10/x)-cancel(3x/x))
+  $
+
+  $
+    lim_(x -> -infinity) (x^3+x^2-0)/(0-3)
+  $
+
+  $
+    lim_(x -> -infinity) (x^3+x^2)/(-3) = +infinity
+  $
+
   #counter(math.equation).update(0)
 ])
