@@ -262,11 +262,11 @@
   == $lim_(x -> -infinity) sqrt(5x^2 - 2)/(x+3)$
 
   $
-    lim_(x -> -infinity) sqrt(5x^2/abs(x)^2 - 2/abs(x)^2)/(x/x+3/x)
+    lim_(x -> -infinity) sqrt(5x^2/abs(x)^2 - 2/abs(x^2))/(x/x+3/x)
   $
 
   $
-    lim_(x -> -infinity) sqrt(5cancel(x^2/abs(x)^2) - cancel(2/abs(x)^2))/(cancel(x/x)+cancel(3/x))
+    lim_(x -> -infinity) sqrt(5cancel(x^2/abs(x)^2) - cancel(2/abs(x^2)))/(cancel(x/x)+cancel(3/x))
   $
 
   $
@@ -361,3 +361,51 @@
 $
   f(x) = cases(12-x^3 ", se" x < 2, m ", se" x = 2, (x^2-4)/(x-2) ", se" x>2)
 $
+
+= Calcule os limites indicados:
+
+#align(block(breakable: false)[
+  #columns(2)[
+    == $lim_(x -> 3) (x^2 - 9)/(x - 3)$
+    == $lim_(x -> 4) (x^2 - 16)/(x^2 - 8x + 16)$
+    == $lim_(x -> -infinity) (x^2 - 6x + 9)/(x - 3)$
+    == $lim_(x -> +infinity) (sqrt(x - 2) - sqrt(x^2 + 10))$
+    == $lim_(x -> +infinity) (3/(x^2 + x) (sqrt(x) - 5))$
+    == $lim_(x -> 2) (sqrt(x) - sqrt(2))/(x - 2)$
+    == $lim_(x -> 3^+) (2x - 6)/(x^2 - 6x + 9)$
+    #colbreak()
+    == $lim_(x -> +infinity) (x^2 - 9x + 20)/(x^3 - 5)$
+    == $lim_(x -> +infinity) (1 + sqrt(x))/(1 - sqrt(x))$
+    == $lim_(x -> +infinity) sqrt(1 + 4x^2)/(4 + x)$
+    == $lim_(x -> -infinity) x/sqrt(x^2 + 1)$
+    == $lim_(x -> 11) (11 - x)/(x^2 - 121)$
+    == $lim_(x -> +infinity) (x + 6) 1/sqrt(4x^2 + 3)$
+    == $lim_(x -> -1) (x^3 + 4x^2 + 5x + 2)/(x^2 + 2x + 1)$
+  ]
+])
+
+= Dado que, para todo $x$ tem-se,
+
+$
+  |g(x) - 2| <= 3(x - 1)^2 #space "encontre" #space lim_(x -> 1) g(x).
+$
+
+= Utilizando os limites fundamentais, calcule:
+
+#align(block(breakable: false)[
+  #columns(2)[
+    == $lim_(x -> 0) (sin 3x)/x$
+    == $lim_(x -> 0) (sin x)/(2x)$
+    == $lim_(x -> 0) (sin pi x)/(sin 3x)$
+    == $lim_(x -> 0) (cos x - 1)/x$
+    == $lim_(x -> 0) x^2/(cos x - 1)$
+    == $lim_(x -> 0) (tan x)/x$
+    #colbreak()
+    == $lim_(x -> 0) x/(sin x)$
+    == $lim_(x -> +infinity) (1 + 1/x)^(2x)$
+    == $lim_(x -> 0) (1 + x)^(1/(5x))$
+    == $lim_(x -> +infinity) (1 + 1/x)^(x+3)$
+    == $lim_(x -> 0) (2e^x - 2)/x$
+    == $lim_(x -> 0) (e^(3x) - 1)/(e^(-x) - 1)$
+  ]
+])
