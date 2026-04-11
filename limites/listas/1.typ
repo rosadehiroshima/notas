@@ -29,6 +29,11 @@
 #let lim = $limits(lim)$
 #let space = h(1.5em)
 
+*Nome:* Luiz Gustavo Silva Carvalho \
+*Curso:* Sistemas de Informação - 6º Semestre
+#v(1em)
+
+Obs: a atividade foi feita anteriormente no papel, apenas foi formalizada em um documento para facilitar a leitura das resoluções
 
 = Use o gráfico dado da $f$ para determinar cada expressão, se ela existir. Se não existir, explique o por quê?
 
