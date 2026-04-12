@@ -602,9 +602,43 @@ $
     lim_(x -> 0) 1/((sin x)/x) = 1/1 = 1
   $
   #counter(math.equation).update(0)
-    == $lim_(x -> +infinity) (1 + 1/x)^(2x)$
-    == $lim_(x -> 0) (1 + x)^(1/(5x))$
-    == $lim_(x -> +infinity) (1 + 1/x)^(x+3)$
-    == $lim_(x -> 0) (2e^x - 2)/x$
-    == $lim_(x -> 0) (e^(3x) - 1)/(e^(-x) - 1)$
+
+  == $lim_(x -> +infinity) (1 + 1/x)^(2x)$
+  $
+    lim_(x -> +infinity) ((1 + 1/x)^x)^2 = e^2
+  $
+  #counter(math.equation).update(0)
+
+  == $lim_(x -> 0) (1 + x)^(1/(5x))$
+  $
+    lim_(x -> 0) ((1 + x)^(1/x))^(1/5) = e^(1/5) = root(5, e)
+  $
+  #counter(math.equation).update(0)
+
+  == $lim_(x -> +infinity) (1 + 1/x)^(x+3)$
+  $
+    lim_(x -> +infinity) (1 + 1/x)^x dot (1 + 1/x)^3
+  $
+  $
+    e dot (1 + 0)^3 = e dot 1 = e
+  $
+  #counter(math.equation).update(0)
+
+  == $lim_(x -> 0) (2e^x - 2)/x$
+  $
+    lim_(x -> 0) (2(e^x - 1))/x
+  $
+  $
+    2 dot lim_(x -> 0) (e^x - 1)/x = 2 dot 1 = 2
+  $
+  #counter(math.equation).update(0)
+
+  == $lim_(x -> 0) (e^(3x) - 1)/(e^(-x) - 1)$
+  $
+    lim_(x -> 0) (((e^(3x) - 1)/(3x)) dot 3x)/(((e^(-x) - 1)/(-x)) dot (-x))
+  $
+  $
+    lim_(x -> 0) ((e^(3x) - 1)/(3x))/((e^(-x) - 1)/(-x)) dot (3cancel(x))/(-cancel(x)) = 1/1 dot (-3) = -3
+  $
+  #counter(math.equation).update(0)
 ])
