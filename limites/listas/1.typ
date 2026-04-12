@@ -529,26 +529,82 @@ $
   $
     lim_(x -> 1) g(x) = 2
   $
+  #counter(math.equation).update(0)
 ]
 
 = Utilizando os limites fundamentais, calcule:
 
-#align(block(breakable: false)[
-  #columns(2, gutter: 3em)[
-    == $lim_(x -> 0) (sin 3x)/x$
-    == $lim_(x -> 0) (sin x)/(2x)$
-    == $lim_(x -> 0) (sin pi x)/(sin 3x)$
-    == $lim_(x -> 0) (cos x - 1)/x$
-    == $lim_(x -> 0) x^2/(cos x - 1)$
-    == $lim_(x -> 0) (tan x)/x$
+#block(align(left)[
+  #set math.equation(numbering: "i)", number-align: left)
 
-    #colbreak()
+  == $lim_(x -> 0) (sin 3x)/x$
+  $
+    lim_(x -> 0) (3 sin 3x)/(3x) = 3 dot lim_(x -> 0) (sin 3x)/(3x) = 3 dot 1 = 3
+  $
+  #counter(math.equation).update(0)
 
-    == $lim_(x -> 0) x/(sin x)$
+  == $lim_(x -> 0) (sin x)/(2x)$
+  $
+    1/2 dot lim_(x -> 0) (sin x)/x = 1/2 dot 1 = 1/2
+  $
+  #counter(math.equation).update(0)
+
+  == $lim_(x -> 0) (sin pi x)/(sin 3x)$
+  $
+    lim_(x -> 0) (((sin pi x)/(pi x)) dot pi x)/(((sin 3x)/(3x)) dot 3x)
+  $
+  $
+    lim_(x -> 0) ((sin pi x)/(pi x))/((sin 3x)/(3x)) dot (pi cancel(x))/(3cancel(x)) = 1/1 dot pi/3 = pi/3
+  $
+  #counter(math.equation).update(0)
+
+  == $lim_(x -> 0) (cos x - 1)/x$
+  $
+    lim_(x -> 0) ((cos x - 1)(cos x + 1))/(x(cos x + 1))
+  $
+  $
+    lim_(x -> 0) (cos^2 x - 1)/(x(cos x + 1))
+  $
+  $
+    lim_(x -> 0) (-sin^2 x)/(x(cos x + 1))
+  $
+  $
+    lim_(x -> 0) (sin x)/x dot (-sin x)/(cos x + 1) = 1 dot (-0)/(1 + 1) = 0
+  $
+  #counter(math.equation).update(0)
+
+  == $lim_(x -> 0) x^2/(cos x - 1)$
+  $
+    lim_(x -> 0) (x^2(cos x + 1))/((cos x - 1)(cos x + 1))
+  $
+  $
+    lim_(x -> 0) (x^2(cos x + 1))/(cos^2 x - 1)
+  $
+  $
+    lim_(x -> 0) (x^2(cos x + 1))/(-sin^2 x)
+  $
+  $
+    lim_(x -> 0) -(x/(sin x))^2 dot (cos x + 1) = -(1)^2 dot (1 + 1) = -2
+  $
+  #counter(math.equation).update(0)
+
+  == $lim_(x -> 0) (tan x)/x$
+  $
+    lim_(x -> 0) ((sin x)/(cos x))/x
+  $
+  $
+    lim_(x -> 0) (sin x)/x dot 1/(cos x) = 1 dot 1/1 = 1
+  $
+  #counter(math.equation).update(0)
+
+  == $lim_(x -> 0) x/(sin x)$
+  $
+    lim_(x -> 0) 1/((sin x)/x) = 1/1 = 1
+  $
+  #counter(math.equation).update(0)
     == $lim_(x -> +infinity) (1 + 1/x)^(2x)$
     == $lim_(x -> 0) (1 + x)^(1/(5x))$
     == $lim_(x -> +infinity) (1 + 1/x)^(x+3)$
     == $lim_(x -> 0) (2e^x - 2)/x$
     == $lim_(x -> 0) (e^(3x) - 1)/(e^(-x) - 1)$
-  ]
 ])
